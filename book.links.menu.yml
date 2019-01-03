@@ -1,0 +1,18 @@
+
+# Book entity menu items definition
+entity.book_entity.collection:
+  title: 'Book entity list'
+  route_name: entity.book_entity.collection
+  description: 'List Book entity entities'
+  parent: system.admin_structure
+  weight: 100
+
+
+# Book entity type menu items definition
+entity.book_entity_type.collection:
+  title: 'Book entity type'
+  route_name: entity.book_entity_type.collection
+  description: 'List Book entity type (bundles)'
+  parent: system.admin_structure
+  weight: 99
+

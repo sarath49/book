@@ -1,0 +1,14 @@
+{
+  "name": "drupal/book",
+  "type": "drupal-module",
+  "description": "Provides custom entity to store information about books",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/book",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/book",
+    "source": "http://cgit.drupalcode.org/book"
+  },
+  "require": { }
+}

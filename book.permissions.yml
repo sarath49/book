@@ -1,0 +1,30 @@
+add book entity entities:
+  title: 'Create new Book entity entities'
+
+administer book entity entities:
+  title: 'Administer Book entity entities'
+  description: 'Allow to access the administration form to configure Book entity entities.'
+  restrict access: true
+
+delete book entity entities:
+  title: 'Delete Book entity entities'
+
+edit book entity entities:
+  title: 'Edit Book entity entities'
+
+view published book entity entities:
+  title: 'View published Book entity entities'
+
+view unpublished book entity entities:
+  title: 'View unpublished Book entity entities'
+
+view all book entity revisions:
+  title: 'View all Book entity revisions'
+
+revert all book entity revisions:
+  title: 'Revert all Book entity revisions'
+  description: 'Role requires permission <em>view Book entity revisions</em> and <em>edit rights</em> for book entity entities in question or <em>administer book entity entities</em>.'
+
+delete all book entity revisions:
+  title: 'Delete all revisions'
+  description: 'Role requires permission to <em>view Book entity revisions</em> and <em>delete rights</em> for book entity entities in question or <em>administer book entity entities</em>.'

@@ -1,0 +1,58 @@
+<?php
+
+/**
+ * @file
+ * Contains book.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function book_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the book module.
+    case 'help.page.book':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Provides custom entity to store information about books') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function book_theme() {
+  $theme = [];
+  $theme['book_entity'] = [
+    'render element' => 'elements',
+    'file' => 'book_entity.page.inc',
+    'template' => 'book_entity',
+  ];
+  $theme['book_entity_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'book_entity.page.inc',
+  ];
+  return $theme;
+}
+
+/**
+* Implements hook_theme_suggestions_HOOK().
+*/
+function book_theme_suggestions_book_entity(array $variables) {
+  $suggestions = [];
+  $entity = $variables['elements']['#book_entity'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'book_entity__' . $sanitized_view_mode;
+  $suggestions[] = 'book_entity__' . $entity->bundle();
+  $suggestions[] = 'book_entity__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'book_entity__' . $entity->id();
+  $suggestions[] = 'book_entity__' . $entity->id() . '__' . $sanitized_view_mode;
+  return $suggestions;
+}

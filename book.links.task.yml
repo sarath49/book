@@ -1,0 +1,23 @@
+# Book entity routing definition
+
+entity.book_entity.canonical:
+  route_name: entity.book_entity.canonical
+  base_route: entity.book_entity.canonical
+  title: 'View'
+
+entity.book_entity.edit_form:
+  route_name: entity.book_entity.edit_form
+  base_route: entity.book_entity.canonical
+  title: 'Edit'
+
+entity.book_entity.version_history:
+  route_name: entity.book_entity.version_history
+  base_route: entity.book_entity.canonical
+  title: 'Revisions'
+
+entity.book_entity.delete_form:
+  route_name:  entity.book_entity.delete_form
+  base_route:  entity.book_entity.canonical
+  title: Delete
+  weight: 10
+
